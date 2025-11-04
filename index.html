@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Durkasell 2</title>
+		<link rel="stylesheet" href="css.css">
+		<script src="jquery.js"></script>
+		<script src="main.js"></script>
+	</head>
+	<body>
+		<h1>Durkasell 2.0</h1>
+		<div id="mine">
+			<div class="bar">
+				<div class="progress"></div>
+			</div>
+			<div class="block">
+				<button class="mine wide">Майнить Шизиум</button>
+				<button class="oneshot dev">+100</button>
+				<p><span class="stamina trans-color">50 / 50</span>
+				<button class="removestamina dev small">-50</button>
+				<button class="givestamina dev small">+50</button>
+				</p>
+			</div>
+			<div class="block filler"></div>
+			<div class="block">
+				<button class="hack wide" disabled>Взломать</button>
+				<p class="mult trans-color">x1</p>
+			</div>
+		</div>
+		<div>
+		<div class="locked" id="inventory">
+			<div class="block">
+				<h2>Шизиум</h2>
+				<table>
+					<tr>
+						<td class="value">Обычный</td>
+						<td class="0 value">0</td>
+						<td>
+							<button class="0 small" disabled>X</button>
+						</td>
+						<button class="give0 dev small">+10</button>
+					</tr>
+					<tr>
+						<td class="value">Необычный</td>
+						<td class="1 value">0</td>
+						<td>
+							<button class="1 small" disabled>X</button>
+						</td>
+						<button class="give1 dev small">+10</button>
+					</tr>
+					<tr>
+						<td class="value">Редкий</td>
+						<td class="2 value">0</td>
+						<td>
+							<button class="2 small" disabled>X</button>
+						</td>
+						<button class="give2 dev small">+10</button>
+					</tr>
+					<tr>
+						<td class="value">Легендарный</td>
+						<td class="3 value">0</td>
+						<td>
+							<button class="3 small" disabled>X</button>
+						</td>
+						<button class="give3 dev small">+10</button>
+					</tr>
+				</table>
+			</div>
+			<div class="block filler"></div>
+			<div class="block">
+				<h2>Предметы</h2>
+				<table>
+					<tr class="luck1">
+						<td class="value">Хеш</td>
+						<td class="i0 value">0</td>
+						<td>
+							<button class="i0 small" disabled>X</button>
+						</td>
+						<button class="givei0 dev small">+10</button>
+					</tr>
+					<tr class="luck3">
+						<td class="value">Алгоритм</td>
+						<td class="i1 value">0</td>
+						<td>
+							<button class="i1 small" disabled>X</button>
+						</td>
+						<button class="givei1 dev small">+10</button>
+					</tr>
+					<tr class="luck5">
+						<td class="value">3Д модель</td>
+						<td class="i2 value">0</td>
+						<td>
+							<button class="i2 small" disabled>X</button>
+						</td>
+						<button class="givei2 dev small">+10</button>
+					</tr>
+					<tr class="luck5">
+						<td class="value">База данных</td>
+						<td class="i3 value">0</td>
+						<td>
+							<button class="i3 small" disabled>X</button>
+						</td>
+						<button class="givei3 dev small">+10</button>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="locked" id="shop">
+			<br>
+			<div class="money-display">
+				<button class="removemoney dev">0</button>
+				<b>$ <span class="money trans-color">0</span></b>
+				<button class="givemoney dev">+10000</button>
+			</div>
+			<div class="block">
+				<h2>Улучшения</h2>
+				<table>
+					<tr>
+						<td class="value" title="Увеличивает эффективность майнинга на 1">Интернет</td>
+						<td class="wifi value small-value">1</td>
+						<td>
+							<button class="wifi">$10</button>
+						</td>
+					</tr>
+					<tr>
+						<td class="value" title="Ускоряет восстановление нажатий на 0.5/с">Охлаждение</td>
+						<td class="cooling value small-value">0</td>
+						<td>
+							<button class="cooling">$50</button>
+						</td>
+					</tr>
+					<tr>
+						<td class="value" title="Увеличивает редкость выпадаемого шизиума и шанс на предметы">Удача</td>
+						<td class="luck value small-value">0</td>
+						<td>
+							<button class="luck">$100</button>
+						</td>
+					</tr>
+				</table>
+				<table>
+					<tr>
+						<td class="value large-value" title="Увеличивает лимит нажатий на 25">Улучш. охлаждение</td>
+						<td>
+							<button class="adv_cooling large">5Н + 1Р + $100</button>
+						</td>
+					</tr>
+					<tr>
+						<td class="value large-value" title="Увеличивает лимит нажатий на 25">Водяное охлаждение</td>
+						<td>
+							<button class="water_cooling large">10Р + 3Л + $500</button>
+						</td>
+					</tr>
+					<tr>
+						<td class="value large-value" title="Увеличивает эффективность майнинга на 2">Проводной интернет</td>
+						<td>
+							<button class="wired_wifi large">25Н + 1Л + $500</button>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="block filler"></div>
+			<div class="block">
+				<h2>Крафты</h2>
+				<table>
+					<tr>
+						<td class="value">Шизиум Л</td>
+						<td class="value xs-value craft3">80%</td>
+						<td>
+							<button class="craft3 large">2Н + 2Р</button>
+						</td>
+					</tr>
+					<tr>
+						<td class="value">Алг. взлома</td>
+						<td class="value xs-value crafthack">70%</td>
+						<td>
+							<button class="crafthack large">2Х</button>
+						</td>
+					</tr>
+					<tr>
+						<td class="value">Шизокоин</td>
+						<td class="value xs-value craftmoney">20%</td>
+						<td>
+							<button class="craftmoney large">3Х + 2А</button>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		</div>
+	</body>
+</html>
